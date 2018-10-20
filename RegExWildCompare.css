@@ -1,0 +1,47 @@
+/* RegExWildCompare.css */
+body
+{
+	font-family: 'Palatino', 'Palatino Linotype', 'serif';	
+	font-weight: 200;
+	background: #A6BAD8;
+	color: #222222;
+	padding: 2em;
+}
+
+textarea
+{
+	font-family: 'Palatino', 'Palatino Linotype', 'serif';
+	font-weight: 200;
+	font-size: 12pt;
+	height: 100%;
+	width: 100%;
+	outline: none;
+	background: none;
+	border: none;
+}
+
+#compare
+{
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial';
+	font-weight: 200;
+	font-size: 11pt;
+	cursor: pointer;
+	position: relative;
+	top: 8px;
+	left: 20px;
+	text-align: center;
+}
+
+#clear
+{
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial';
+	font-weight: 200;
+	font-size: 11pt;
+	cursor: pointer;
+	position: relative;
+	top: 8px;
+	left: 20px;
+	text-align: center;
+}
+
+	
