@@ -1,5 +1,5 @@
 # MatchingWildcardsInJavaScript
-Matching Wildcards in JavaScript
+<b>Matching Wildcards in JavaScript&reg;</b>
 
 This file set includes a routine for matching wildcards in JavaScript (FastWildCompare.js), ported from the native code implementation here:
 http://www.developforperformance.com/MatchingWildcards_AnImprovedAlgorithmForBigData.html
