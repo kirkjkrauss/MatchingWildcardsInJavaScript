@@ -53,8 +53,33 @@ function ValidateAndCompareInput()
 //
 window.onload = function()
 {
-	ClearForm();	
+	ClearForm();
+
+	// Connect the buttons to their respective routines.
 	$("compare").onclick = ValidateAndCompareInput;
 	$("clear").onclick = ClearForm;
+
+	// Get the Enter key to effectively click the "Compare" button.
+	var fieldTame = $("tame");
+	var fieldWild = $("wild");	
+
+	fieldTame.addEventListener("keyup", 
+		function(event)
+		{
+			if (event.keyCode === 13)
+			{
+				$("compare").click();
+			}
+		});
+
+	fieldWild.addEventListener("keyup", 
+		function(event)
+		{
+			if (event.keyCode === 13)
+			{
+				$("compare").click();
+			}
+		});
+
 	return;
 }

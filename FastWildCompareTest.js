@@ -1,4 +1,6 @@
 // FastWildCompareTest.js
+// This is a set of performance comparison and correctness tests, for 
+// routines for matching wildcards.
 // Copyright 2018 Zettalocity Software.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +22,8 @@ var bCompareTame = true;
 var bCompareEmpty = true;
 
 // When this value is true, it sets up the run to compare the performance of 
-// two routines for matching wildcards.
+// two routines for matching wildcards.  Otherwise, just one routine is 
+// tested, for correctness.
 //
 var bComparePerformance = true;
 
@@ -89,6 +92,9 @@ function TestWild()
 
     while (nReps--)
     {
+		// Case with first wildcard after total match.
+        bAllPassed &= Confirm("Hi", "Hi*", true);
+
 		// Case with mismatch after '*'
         bAllPassed &= Confirm("abc", "ab*d", false);
 
@@ -484,7 +490,15 @@ function RunTests()
 
 	if (bPassed)
 	{
-		$("testsetresult").firstChild.nodeValue = "All tests passed (for both algorithms).";
+		let strResult = "All tests passed";
+		
+		if (bComparePerformance)
+		{
+			strResult += " (for both algorithms)";
+		}
+		
+		strResult += ".";
+		$("testsetresult").firstChild.nodeValue = strResult;
 		
 		if (bComparePerformance)
 		{

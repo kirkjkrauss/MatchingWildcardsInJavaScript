@@ -38,6 +38,14 @@ function FastWildCompare(strWild, strTame)
 		{
 			if (strWild[iWild] != undefined)
 			{
+				while (strWild[iWild++] == '*')
+				{
+					if (strWild[iWild] == undefined)
+					{
+						return true;   // "ab" matches "ab*".
+					}
+				}
+
 			    return false;          // "abcd" doesn't match "abc".
 			}
 			else
