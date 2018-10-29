@@ -17,21 +17,21 @@
 
 // These values set up specific sets of tests for the "Run test set" button.
 //
-var bCompareWild = true;
-var bCompareTame = true;
-var bCompareEmpty = true;
+const bCompareWild = true;
+const bCompareTame = true;
+const bCompareEmpty = true;
 
 // When this value is true, it sets up the run to compare the performance of 
 // two routines for matching wildcards.  Otherwise, just one routine is 
 // tested, for correctness.
 //
-var bComparePerformance = true;
+const bComparePerformance = true;
 
 // This next value sets a number of repetitions for performance comparison,
 // but applies only if the above Boolean value is true.  Choose about as many 
 // repetitions as you're expecting in the real world.
 //
-var nComparisonReps = 100;
+const nComparisonReps = 100;
 
 // These values store performance comparison results. 
 //
